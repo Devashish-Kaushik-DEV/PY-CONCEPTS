@@ -2,10 +2,20 @@
 
 ### Table of Content
 
+- Python Key Features
+- Comments and Docstrings
+- Keywords & Identifiers
 - Variables in Python
+- Rules for Naming Variables
+- Variable Assignment
 - Type Casting Variables
 - Scope of Variable
+- Datatypes
+- Constants
 - Input and Output in python
+  - Taking Multiple Inputs
+  - Typecasted Inputs
+  - Output Formatting
 
 **Founder: Python was created by Guido van Rossum in 1991**
 
@@ -17,7 +27,69 @@
 4. Object-Oriented & Functional: supports OOPs and functional programming.
 5. Community Support: large active community and resources.
 
-### Variables in Python
+### **Comments and Docstrings**
+
+Comments are notes in your code that are ignored by Python during execution. Docstrings are string literals used to document code like functions or classes.
+
+- Single-line Comments: Begins with # and continues to the end of the line.
+    
+    ```python
+    print("executable") #This is a comment & non executable
+    ```
+    
+- Multi-line Comments:
+    - Consecutive `#` symbols
+    - Triple-quoted strings (`'''` or `"""`)
+        
+        ```python
+        def func():
+            """This is a Multi-line Comment
+            also called Doctring & can be accessed too"""
+        print(func.__doc__)
+
+        ```
+
+### **Keywords & Identifiers**
+
+**Keywords:** are the reserved words that have predefined meanings and purposes. They cannot be used as variable names or identifiers and they are case sensitive.
+
+- **Examples of Python Keywords**
+    
+    ```python
+    False, True, None, and, or, not, if, elif, else, while, for, break, continue, return, def, class, try, except, finally, raise, import, from, as, pass, global, nonlocal, in, is, lambda, with, yield
+    ```
+    
+    ```python
+     age > 18:
+        print("Eligible")  #Valid usage
+        
+     class = "Math"  *#Invalid usage 'class' is a keyword*
+    ```
+    
+**Identifiers:** Identifiers are the names used to identify variables, functions, classes, modules, or objects in Python.
+
+- **Rules for Naming Identifiers**
+    - Can include letters (A-Z, a-z), digits (0-9), and underscores (_)
+    - Cannot start with a digit
+    - Cannot use Python keywords
+    - Case-sensitive (**`Name`** and **`name`** are different)
+- **Valid Identifiers**
+    
+    ```python
+    userName = "Dev"
+    _userAge = 20
+    score_1 = 99
+    ```
+    
+- **Invalid Identifiers**
+    
+    ```python
+    1name = "Wrong"     *# Cannot start with digit*
+    def = 100           *# Cannot use keywords*
+    user-name = "Dev"   *# Hyphens not allowed*
+    ```
+
+### **Variables in Python**
 
 - **Definition:** A variable in Python is a named reference used to store and manage data values in a program (A container for a value). python is dynamically typed language so do not require explicit type declaration.
     
@@ -28,8 +100,7 @@
     age =  20 
     ```
     
-
-### Rules for naming Variables
+### **Rules for naming Variables**
 
 - Variable names can only contain letters, digits and underscores.
 - A variable name cannot start with a digit.
@@ -112,6 +183,80 @@
     print(a)    #output: I am global Scope
     ```
     
+### **Datatypes**
+
+**Data types**: specify the type of value a variable can hold. Python is dynamically typed, so variables do not require an explicit declaration to reserve memory space.
+
+**Built-in Data Types in Python categorized as:**
+
+- **Numeric Type**
+    
+    ```python
+    int    -> Integer value (e.g., 10, -5)
+    float  -> Floating point number (e.g., 3.14, -0.1)
+    complex -> Complex number (e.g., 2 + 5j)
+    ```
+    
+- **Text Type**
+    
+    ```python
+    str -> String (e.g., "Python", 'Hello')
+    ```
+    
+- **Sequence Type**
+    
+    ```python
+    list  -> Ordered, mutable (e.g., [1, 2, 3])
+    tuple -> Ordered, immutable (e.g., (1, 2, 3))
+    range -> Sequence of numbers (e.g., range(5))
+    ```
+    
+- **Mapping Type**
+    
+    ```python
+    dict -> Key-value pairs (e.g., {"name": "Dev", "age": 20})
+    ```
+    
+- **Set Type**
+    
+    ```python
+    set     -> Unordered, no duplicate (e.g., {1, 2, 3})
+    frozenset -> Immutable version of set
+    ```
+    
+- **Boolean Type**
+    
+    ```python
+    bool -> True / False
+    ```   
+
+**Detailed Example**
+
+```python
+x = 10           # int
+pi = 3.14        # float
+name = "Dev"     # str
+isValid = True   # bool
+data = [1, 2, 3] # list
+info = {"id": 1, "name": "Dev"} # dict
+
+'''Use Type to check the Type'''
+print(type(name))  # Output: <class 'str'>
+print(type(data))  # Output: <class 'list'>
+```
+
+### **Datatypes**
+
+**Constant:** a variable whose value should not change during the execution of a program (though Python doesn't enforce constant behavior like other languages).
+
+Python doesn't have a native constant keyword — instead:
+
+- Use **UPPERCASE** naming convention to indicate a variable is a constant.
+- It's a **naming guideline**, not a strict rule.
+    
+    ```python
+    PI = 3.14159   #Fixed value 
+    ```
 
 ### Input and Output in python (I/O)
 
@@ -184,3 +329,6 @@ print(c)    #Typecasting to string
     Score: {marks:.1f}
     """)
     ```
+    
+    ---
+
